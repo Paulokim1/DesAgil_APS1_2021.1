@@ -1,1 +1,4 @@
-# DesAgil_APS1_2021.1
+# APS 1 da matéria de Desenvolvimento Ágil 2021.1
+## Membros:
+- Paulo Wook Kim 
+- Rodrigo Guimarães Coelho 
