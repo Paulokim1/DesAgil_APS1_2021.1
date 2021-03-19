@@ -3,9 +3,9 @@ package br.edu.insper.desagil.vaimalte;
 public class Produto {
 	private int codigo;
 	private String nome;
-	private int preco;
+	private Double preco;
 	
-	public Produto(int codigo, String nome, int preco) {
+	public Produto(int codigo, String nome, Double preco) {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.preco = preco;
@@ -19,7 +19,7 @@ public class Produto {
 		return this.nome;
 	}
 	
-	public int getPreco() {
+	public Double getPreco() {
 		return this.preco;
 	}
 

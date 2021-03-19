@@ -17,11 +17,11 @@ public class Pedido {
 		return this.quantidade;
 	}
 	
-	public int incrementa() {
-		return this.quantidade + 1;
+	public void incrementa() {
+		this.quantidade ++;
 	}
 	
-	public int total() {
+	public Double total() {
 		return this.produto.getPreco() * this.quantidade;
 	}
 

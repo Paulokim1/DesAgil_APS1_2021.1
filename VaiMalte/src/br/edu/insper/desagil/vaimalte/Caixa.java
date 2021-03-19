@@ -16,7 +16,7 @@ public class Caixa {
 		
 		if (desconto >= 1 && desconto <= 99) {
 			this.dic_descontos.put(cod_produto, desconto);
-			return dic_descontos;
+			return this.dic_descontos;
 		}
 		return null;
 	}
@@ -28,14 +28,15 @@ public class Caixa {
 		for (Pedido pedido: carrinho.getLista_pedidos()) {
 			
 			Integer codigo = pedido.getProduto().getCodigo();
-			Integer preco = pedido.getProduto().getPreco();
+			Double preco = pedido.getProduto().getPreco();
 			Integer quantidade = pedido.getQuantidade();
 			
 			if (this.dic_descontos.containsKey(codigo)) {
 				
 				Integer desconto = this.dic_descontos.get(codigo);
-				Double valor_pedido_desc = (double) (preco * quantidade * (1 - desconto));
 				
+				Double valor_pedido_desc = (double) (preco * quantidade * ((100.00 - desconto)/100.00));
+
 				valor_total = valor_total + valor_pedido_desc;
 				
 			} else {
