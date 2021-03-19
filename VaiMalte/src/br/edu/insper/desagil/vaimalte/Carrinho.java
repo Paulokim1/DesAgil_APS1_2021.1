@@ -26,3 +26,5 @@ public class Carrinho {
 		return this.lista_pedidos;	
 	}
 }
+
+
