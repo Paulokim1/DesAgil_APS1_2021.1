@@ -25,7 +25,7 @@ public class Caixa {
 		
 		Double valor_total = (double) 0;
 		
-		for (Pedido pedido: carrinho.getLista_pedidos()) {
+		for (Pedido pedido: carrinho.getListaPedidos()) {
 			
 			Integer codigo = pedido.getProduto().getCodigo();
 			Double preco = pedido.getProduto().getPreco();

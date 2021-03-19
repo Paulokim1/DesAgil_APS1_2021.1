@@ -17,7 +17,7 @@ public class Testador {
 		Produto produto_1 = new Produto(3, "Leite", 9.00);
 		Carrinho carrinho = new Carrinho();
 		
-		carrinho.incrementa_lista(produto_1);
+		carrinho.incrementaLista(produto_1);
 		
 		Caixa caixa = new Caixa();
 		
@@ -32,7 +32,7 @@ public class Testador {
 		Produto produto_1 = new Produto(45, "Carne", 60.00);
 		Carrinho carrinho = new Carrinho();
 		
-		carrinho.incrementa_lista(produto_1);
+		carrinho.incrementaLista(produto_1);
 		
 		Caixa caixa = new Caixa();
 		
@@ -51,9 +51,9 @@ public class Testador {
 		Produto produto_2 = new Produto(23, "Abacate", 8.00);
 		Carrinho carrinho = new Carrinho();
 		
-		carrinho.incrementa_lista(produto_1);
-		carrinho.incrementa_lista(produto_2);
-		carrinho.incrementa_lista(produto_2);
+		carrinho.incrementaLista(produto_1);
+		carrinho.incrementaLista(produto_2);
+		carrinho.incrementaLista(produto_2);
 		
 		Caixa caixa = new Caixa();
 		
@@ -71,9 +71,9 @@ public class Testador {
 		Produto produto_2 = new Produto(69, "Chocolate", 18.00);
 		Carrinho carrinho = new Carrinho();
 		
-		carrinho.incrementa_lista(produto_1);
-		carrinho.incrementa_lista(produto_1);
-		carrinho.incrementa_lista(produto_2);
+		carrinho.incrementaLista(produto_1);
+		carrinho.incrementaLista(produto_1);
+		carrinho.incrementaLista(produto_2);
 		
 		Caixa caixa = new Caixa();
 		
