@@ -29,16 +29,16 @@ public class Testador {
 
 	public boolean testeC() {
 		
-		Produto produto_1 = new Produto(45, "Carne", 60.00);
+		Produto produto_1 = new Produto(45, "Carne", 12.00);
 		Carrinho carrinho = new Carrinho();
 		
 		carrinho.incrementaLista(produto_1);
 		
 		Caixa caixa = new Caixa();
 		
-		caixa.addDesconto(produto_1, 12);
+		caixa.addDesconto(produto_1, 20);
 		
-		if (caixa.totalCarrinho(carrinho) == 52.8) {
+		if (caixa.totalCarrinho(carrinho) == 9.60) {
 			return true;
 		}
 	    return false;

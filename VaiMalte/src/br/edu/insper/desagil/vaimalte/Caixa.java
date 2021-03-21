@@ -44,6 +44,7 @@ public class Caixa {
 				valorTotal = valorTotal + pedido.total();
 			}
 		}
+		valorTotal = (double) (Math.round(valorTotal*100.00)/100.00);
 		
 		return valorTotal;
 	}
