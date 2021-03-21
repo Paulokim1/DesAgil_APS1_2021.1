@@ -4,26 +4,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Caixa {
-	private Map<Integer, Integer> dic_descontos;
+	private Map<Integer, Integer> dicDescontos;
 	
 	public Caixa() {
-		this.dic_descontos = new HashMap<>();
+		this.dicDescontos = new HashMap<>();
 	}
 	
-	public Map<Integer, Integer> add_desconto(Produto produto, Integer desconto){
+	public Map<Integer, Integer> addDesconto(Produto produto, Integer desconto){
 		
-		Integer cod_produto = produto.getCodigo();
+		Integer codProduto = produto.getCodigo();
 		
 		if (desconto >= 1 && desconto <= 99) {
-			this.dic_descontos.put(cod_produto, desconto);
-			return this.dic_descontos;
+			this.dicDescontos.put(codProduto, desconto);
+			return this.dicDescontos;
 		}
 		return null;
 	}
 	
-	public Double total_carrinho(Carrinho carrinho) {
+	public Double totalCarrinho(Carrinho carrinho) {
 		
-		Double valor_total = (double) 0;
+		Double valorTotal = (double) 0;
 		
 		for (Pedido pedido: carrinho.getListaPedidos()) {
 			
@@ -31,21 +31,21 @@ public class Caixa {
 			Double preco = pedido.getProduto().getPreco();
 			Integer quantidade = pedido.getQuantidade();
 			
-			if (this.dic_descontos.containsKey(codigo)) {
+			if (this.dicDescontos.containsKey(codigo)) {
 				
-				Integer desconto = this.dic_descontos.get(codigo);
+				Integer desconto = this.dicDescontos.get(codigo);
 				
-				Double valor_pedido_desc = (double) (preco * quantidade * ((100.00 - desconto)/100.00));
+				Double valorPedidoDesc = (double) (preco * quantidade * ((100.00 - desconto)/100.00));
 
-				valor_total = valor_total + valor_pedido_desc;
+				valorTotal = valorTotal + valorPedidoDesc;
 				
 			} else {
 				
-				valor_total = valor_total + pedido.total();
+				valorTotal = valorTotal + pedido.total();
 			}
 		}
 		
-		return valor_total;
+		return valorTotal;
 	}
 	
 }

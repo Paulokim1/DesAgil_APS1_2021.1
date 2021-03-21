@@ -6,7 +6,7 @@ public class Testador {
 		Carrinho carrinho = new Carrinho();
 		Caixa caixa = new Caixa();
 		
-		if (caixa.total_carrinho(carrinho) == 0) {
+		if (caixa.totalCarrinho(carrinho) == 0) {
 			return true;
 		}
 	    return false;
@@ -21,7 +21,7 @@ public class Testador {
 		
 		Caixa caixa = new Caixa();
 		
-		if (caixa.total_carrinho(carrinho) == 9) {
+		if (caixa.totalCarrinho(carrinho) == 9) {
 			return true;
 		}
 	    return false;
@@ -36,9 +36,9 @@ public class Testador {
 		
 		Caixa caixa = new Caixa();
 		
-		caixa.add_desconto(produto_1, 12);
+		caixa.addDesconto(produto_1, 12);
 		
-		if (caixa.total_carrinho(carrinho) == 52.8) {
+		if (caixa.totalCarrinho(carrinho) == 52.8) {
 			return true;
 		}
 	    return false;
@@ -57,9 +57,9 @@ public class Testador {
 		
 		Caixa caixa = new Caixa();
 		
-		caixa.add_desconto(produto_1, 10);
+		caixa.addDesconto(produto_1, 10);
 		
-		if (caixa.total_carrinho(carrinho) == 29.5) {
+		if (caixa.totalCarrinho(carrinho) == 29.5) {
 			return true;
 		}
 	    return false;
@@ -77,9 +77,9 @@ public class Testador {
 		
 		Caixa caixa = new Caixa();
 		
-		caixa.add_desconto(produto_1, 5);
+		caixa.addDesconto(produto_1, 5);
 		
-		if (caixa.total_carrinho(carrinho) == 27.5) {
+		if (caixa.totalCarrinho(carrinho) == 27.5) {
 			return true;
 		}
 	    return false;
