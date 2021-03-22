@@ -14,10 +14,10 @@ public class Testador {
 
 	public boolean testeB() {
 		
-		Produto produto_1 = new Produto(3, "Leite", 9.00);
+		Produto produto1 = new Produto(3, "Leite", 9.00);
 		Carrinho carrinho = new Carrinho();
 		
-		carrinho.incrementaLista(produto_1);
+		carrinho.incrementaLista(produto1);
 		
 		Caixa caixa = new Caixa();
 		
@@ -29,14 +29,14 @@ public class Testador {
 
 	public boolean testeC() {
 		
-		Produto produto_1 = new Produto(45, "Carne", 12.00);
+		Produto produto1 = new Produto(45, "Carne", 12.00);
 		Carrinho carrinho = new Carrinho();
 		
-		carrinho.incrementaLista(produto_1);
+		carrinho.incrementaLista(produto1);
 		
 		Caixa caixa = new Caixa();
 		
-		caixa.addDesconto(produto_1, 20);
+		caixa.addDesconto(produto1, 20);
 		
 		if (caixa.totalCarrinho(carrinho) == 9.60) {
 			return true;
@@ -47,17 +47,17 @@ public class Testador {
 
 	public boolean testeD() {
 		
-		Produto produto_1 = new Produto(38, "Detergente", 15.00);
-		Produto produto_2 = new Produto(23, "Abacate", 8.00);
+		Produto produto1 = new Produto(38, "Detergente", 15.00);
+		Produto produto2 = new Produto(23, "Abacate", 8.00);
 		Carrinho carrinho = new Carrinho();
 		
-		carrinho.incrementaLista(produto_1);
-		carrinho.incrementaLista(produto_2);
-		carrinho.incrementaLista(produto_2);
+		carrinho.incrementaLista(produto1);
+		carrinho.incrementaLista(produto2);
+		carrinho.incrementaLista(produto2);
 		
 		Caixa caixa = new Caixa();
 		
-		caixa.addDesconto(produto_1, 10);
+		caixa.addDesconto(produto1, 10);
 		
 		if (caixa.totalCarrinho(carrinho) == 29.5) {
 			return true;
@@ -67,17 +67,17 @@ public class Testador {
 
 	public boolean testeE() {
 	    
-		Produto produto_1 = new Produto(86, "Coca-cola", 5.00);
-		Produto produto_2 = new Produto(69, "Chocolate", 18.00);
+		Produto produto1 = new Produto(86, "Coca-cola", 5.00);
+		Produto produto2 = new Produto(69, "Chocolate", 18.00);
 		Carrinho carrinho = new Carrinho();
 		
-		carrinho.incrementaLista(produto_1);
-		carrinho.incrementaLista(produto_1);
-		carrinho.incrementaLista(produto_2);
+		carrinho.incrementaLista(produto1);
+		carrinho.incrementaLista(produto1);
+		carrinho.incrementaLista(produto2);
 		
 		Caixa caixa = new Caixa();
 		
-		caixa.addDesconto(produto_1, 5);
+		caixa.addDesconto(produto1, 5);
 		
 		if (caixa.totalCarrinho(carrinho) == 27.5) {
 			return true;
